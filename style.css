@@ -9,14 +9,14 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('Me n My Wife.JPG') center top / cover no-repeat;
+  background: url('bg-fotokamu.jpg') center top / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* gelapin background biar teks keliatan */
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   padding: 40px 20px;
@@ -26,13 +26,20 @@ body {
   color: white;
 }
 
-.Me n My Wife.JPG {
-  width: 1000px;
-  height: 2008px;
-  border-radius: 70%;
+.foto-kami {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
   margin: 0 auto 20px;
+}
+
+/* Tambahan supaya background tetap proporsional */
+@media (max-height: 600px) {
+  .hero {
+    height: 80vh;
+  }
 }
 
 .detail, .rsvp {
