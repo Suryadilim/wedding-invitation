@@ -9,10 +9,11 @@ document.addEventListener('selectstart', function (e) {
 });
 
 // Menangani pengiriman RSVP form
-document.getElementById('rsvp-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nama = document.getElementById('nama').value;
-    const kehadiran = document.getElementById('kehadiran').value;
+document.getElementById("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Terima kasih atas konfirmasi Anda!");
+});
+
 
     alert(`Terima kasih, ${nama}! Anda telah memilih untuk ${kehadiran === 'ya' ? 'hadir' : 'tidak hadir'}.`);
     // Bisa menambahkan pengiriman data ke server di sini, atau email.
