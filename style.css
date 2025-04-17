@@ -17,9 +17,9 @@ body, html {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('Me n My Wife.JPG'); /* GANTI DENGAN NAMA FILE FOTO BACKGROUND-MU */
+  background-image: url('Me n My Wife.JPG');
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ body, html {
 
 /* Overlay gelap agar teks kelihatan */
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65); /* LEBIH GELAP */
   padding: 20px;
   width: 100%;
   height: 100%;
@@ -37,7 +37,13 @@ body, html {
   flex-direction: column;
   justify-content: center;
   color: white;
+  z-index: 2;
 }
+
+h1, h2, p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Tambah shadow biar makin kelihatan */
+}
+
 
 /* Foto pasangan */
 .Me n My Wife {
