@@ -7,39 +7,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Musik Latar -->
-  <audio autoplay loop hidden>
-    <source src="music.mp3" type="audio/mpeg" />
-    Browser Anda tidak mendukung audio.
-  </audio>
-
-  <!-- Bagian Atas -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="overlay">
-      <img src="foto-kami.jpg" alt="Foto Pasangan" class="foto-kami" />
+      <img src="Me n My Wife.JPG" alt="Foto Pasangan" class="foto-kami" />
       <h1>Undangan Pernikahan</h1>
       <h2>Risna & Budi</h2>
-      <p>Sabtu, 15 Agustus 2025 - Gedung Serbaguna, Jakarta</p>
+      <p>Sabtu, 15 Agustus 2025<br>Gedung Serbaguna, Jakarta</p>
     </div>
   </section>
 
-  <!-- Detail Acara -->
+  <!-- Detail Section -->
   <section class="detail">
     <h3>Detail Acara</h3>
-    <p><strong>Tanggal:</strong> 15 Agustus 2025</p>
+    <p><strong>Tanggal:</strong> Sabtu, 15 Agustus 2025</p>
     <p><strong>Waktu:</strong> 10.00 WIB</p>
     <p><strong>Tempat:</strong> Gedung Serbaguna, Jakarta</p>
   </section>
 
-  <!-- Konfirmasi Kehadiran -->
+  <!-- RSVP Section -->
   <section class="rsvp">
     <h3>Konfirmasi Kehadiran</h3>
     <form id="form">
       <input type="text" placeholder="Nama Anda" required />
       <select required>
-        <option value="">Apakah Anda akan hadir?</option>
-        <option value="ya">Ya</option>
-        <option value="tidak">Tidak</option>
+        <option value="">-- Pilih Kehadiran --</option>
+        <option value="ya">Ya, saya hadir</option>
+        <option value="tidak">Maaf, tidak bisa hadir</option>
       </select>
       <button type="submit">Kirim</button>
     </form>
