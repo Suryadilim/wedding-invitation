@@ -7,18 +7,32 @@ body {
 }
 
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('background.jpg') center/cover no-repeat;
+  position: relative;
+  height: 100vh;
+  background: url('namafotokamu.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* gelapin background biar teks keliatan */
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: white;
-  padding: 50px 20px;
 }
 
 .foto-kami {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 .detail, .rsvp {
@@ -42,6 +56,7 @@ button {
   padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
