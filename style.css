@@ -5,123 +5,60 @@ body {
   color: #333;
 }
 
-.hero {
-  min-height: 100vh;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.header {
   text-align: center;
-  padding: 3rem 1.5rem;
+  padding: 2rem;
+  background-image: url('background.jpg'); /* Ganti dengan gambar latar belakang Anda */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
-.hero-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.quote {
+  text-align: center;
+  font-style: italic;
+  margin: 2rem;
 }
 
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+.details {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.details h2 {
   margin-top: 1rem;
 }
 
-.hero-date {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  color: #666;
+.rsvp {
+  padding: 2rem;
+  background-color: #fff;
 }
 
-.hero-sub {
-  font-size: 1rem;
-  color: #999;
-  margin-top: 0.5rem;
-}
-
-.hero-button {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ec4899;
-  color: white;
-  text-decoration: none;
-  border-radius: 9999px;
-  transition: background-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #db2777;
-}
-
-.section {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-.detail-box {
-  margin-bottom: 2rem;
-}
-
-.detail-sub {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-}
-
-.gallery-grid img {
-  width: 100%;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.rsvp-form {
-  max-width: 400px;
-  margin: 0 auto;
+.rsvp form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
 }
 
-.rsvp-form input,
-.rsvp-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
+.rsvp input, .rsvp textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
   border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.rsvp-form button {
-  padding: 0.75rem;
+.rsvp button {
+  padding: 0.5rem;
   background-color: #ec4899;
-  color: white;
+  color: #fff;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.rsvp-form button:hover {
-  background-color: #db2777;
-}
-
 .footer {
-  padding: 2rem 1rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  background-color: white;
+  padding: 1rem;
+  background-color: #f1f1f1;
 }
