@@ -59,8 +59,10 @@ body {
 
 .sakura.right {
   right: 0;
+  bottom: 40px;
   transform: rotate(15deg);
 }
+
 
 .burung {
   position: absolute;
