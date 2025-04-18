@@ -1,110 +1,83 @@
 /* style.css */
-:root {
-  --inv-bg: #f6f4f0;
-  --inv-base: #3d67a4;
-  --inv-accent: #e6a0ad;
-  --btn-color: #ffffff;
-  --font-base: "Jost", sans-serif;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;700&display=swap');
 
 body {
   margin: 0;
-  font-family: var(--font-base);
-  background-color: var(--inv-bg);
-  color: var(--inv-base);
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
+  scroll-behavior: smooth;
+  position: relative;
 }
 
-.hero {
-  background: url('https://satumomen.com/themes/watercolor-peacock/bg.webp') no-repeat center center;
-  background-size: cover;
+.container {
+  padding: 2rem;
   text-align: center;
-  padding: 4rem 1rem;
-  border-radius: 12px;
+  animation: fadeIn 2s ease-in;
 }
 
-.subheading {
-  font-size: 1.2rem;
-  color: var(--inv-base);
-}
-
-.name {
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--inv-accent);
-  margin: 0;
-}
-
-.and {
-  font-size: 2rem;
-  display: block;
+h1, h2, h3 {
+  font-family: 'Great Vibes', cursive;
   margin: 0.5rem 0;
-  color: var(--inv-accent);
+  animation: fadeIn 2s ease-in;
 }
 
-.guest, .guest-name {
-  margin-top: 1rem;
-}
-
-.guest-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--inv-accent);
-}
-
-.btn-open {
-  margin-top: 1.5rem;
-  background-color: var(--inv-accent);
-  color: var(--btn-color);
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-size: 1rem;
+  background-color: #f0b3c5;
+  color: white;
+  border-radius: 10px;
   cursor: pointer;
+  animation: fadeIn 2s ease-in;
 }
 
-.quotes {
-  padding: 2rem;
-  text-align: center;
-  font-style: italic;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-
-.reference {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-.event, .rsvp, .gallery {
-  padding: 2rem;
-  text-align: center;
-}
-
-.gallery .frame {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.gallery img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-form input, form select, form button {
-  display: block;
+nav {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  max-width: 300px;
-  margin: 0.5rem auto;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  z-index: 1000;
+  animation: fadeIn 2s ease-in;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f08080;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d16a7e;
+}
+
+.background-corner {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  opacity: 0.7;
+  z-index: 0;
+  animation: slowFadeIn 5s ease-in-out;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; transform: scaleX(-1); }
+.bottom-left { bottom: 0; left: 0; transform: scaleY(-1); }
+.bottom-right { bottom: 0; right: 0; transform: scale(-1); }
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slowFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0.7; }
 }
