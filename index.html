@@ -3,65 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Pernikahan | Suryadi & Lillis Cicilia</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preload" as="audio" href="/music.mp3" />
+  <title>Undangan Pernikahan | Grei & Rifi</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Musik -->
-  <audio id="bg-music" autoplay loop>
-    <source src="/music.mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung audio.
-  </audio>
-  <script>
-    window.addEventListener('click', () => {
-      const music = document.getElementById('bg-music');
-      music.play();
-    }, { once: true });
-  </script>
+  <!-- Header -->
+  <header class="header">
+    <h1>Grei & Rifi</h1>
+    <p>Sabtu, 07 Desember 2024</p>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="/foto-pasangan.jpg" alt="Foto Pasangan" class="hero-img" />
-    <h1 class="hero-title">Suryadi & Lillis Cicilia</h1>
-    <p class="hero-date">Minggu, 20 Juli 2025</p>
-    <p class="hero-sub">Kami mengundang Anda untuk merayakan hari bahagia kami</p>
-    <a href="#rsvp" class="hero-button">Lihat Undangan</a>
+  <!-- Kutipan -->
+  <section class="quote">
+    <p>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu..."</p>
+    <p>(Surah Ar-Rum : 21)</p>
   </section>
 
   <!-- Detail Acara -->
-  <section class="section detail">
-    <h2 class="section-title">Detail Acara</h2>
-    <div class="detail-box">
-      <h3 class="detail-sub">Akad Nikah</h3>
-      <p>Minggu, 20 Juli 2025</p>
-      <p>08.00 WIB</p>
-      <p>Masjid Al-Hikmah, Jakarta Barat</p>
-    </div>
-    <div class="detail-box">
-      <h3 class="detail-sub">Resepsi</h3>
-      <p>Minggu, 20 Juli 2025</p>
-      <p>11.00 - 14.00 WIB</p>
-      <p>Gedung Serbaguna Harmoni, Jakarta Barat</p>
-    </div>
-  </section>
+  <section class="details">
+    <h2>Akad Nikah</h2>
+    <p>Selasa, 24 Desember 2024</p>
+    <p>11:00 - 13:00 WIB</p>
+    <p>Kediaman Mempelai</p>
 
-  <!-- Galeri -->
-  <section class="section gallery">
-    <h2 class="section-title">Galeri Kami</h2>
-    <div class="gallery-grid">
-      <img src="/foto1.jpg" alt="Galeri 1" />
-      <img src="/foto2.jpg" alt="Galeri 2" />
-      <img src="/foto3.jpg" alt="Galeri 3" />
-    </div>
+    <h2>Resepsi</h2>
+    <p>Selasa, 24 Desember 2024</p>
+    <p>11:00 - 13:00 WIB</p>
+    <p>Kediaman Mempelai</p>
   </section>
 
   <!-- RSVP -->
-  <section id="rsvp" class="section rsvp">
-    <h2 class="section-title">Konfirmasi Kehadiran</h2>
-    <form action="https://formsubmit.co/emailkamu@example.com" method="POST" class="rsvp-form">
-      <input type="text" name="nama" required placeholder="Nama Lengkap" />
-      <input type="text" name="jumlah" required placeholder="Jumlah Tamu" />
+  <section class="rsvp">
+    <h2>Konfirmasi Kehadiran</h2>
+    <form action="https://formsubmit.co/emailkamu@example.com" method="POST">
+      <input type="text" name="nama" placeholder="Nama Lengkap" required />
+      <input type="text" name="jumlah" placeholder="Jumlah Tamu" required />
       <textarea name="pesan" placeholder="Ucapan / Doa"></textarea>
       <button type="submit">Kirim</button>
     </form>
@@ -69,7 +45,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    © 2025 Suryadi & Lillis Cicilia | Dibuat dengan ❤️ | Powered by Suryadi
+    <p>© 2024 Grei & Rifi</p>
   </footer>
 </body>
 </html>
