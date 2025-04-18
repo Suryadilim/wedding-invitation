@@ -61,3 +61,22 @@
     max-width: 1140px;
   }
 }
+@media (min-width: 768px) {
+  #panZoom {
+    transform: none !important;
+    transform-origin: unset !important;
+    position: static !important;
+  }
+
+  #workspace-container {
+    position: static !important;
+    overflow: visible !important;
+  }
+
+  .canvas {
+    height: auto !important;
+    transform: none !important;
+    position: static !important;
+    width: 100% !important;
+  }
+}
