@@ -3,68 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Pernikahan | Grei & Rifi</title>
+  <title>Undangan Pernikahan | Suryadi & Lillis Cicilia</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- AOS Animations -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Musik -->
-  <audio id="bg-music" autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung audio.
-  </audio>
-  <script>
-    window.addEventListener('click', () => {
-      document.getElementById('bg-music').play();
-    }, { once: true });
-  </script>
+  <div class="hero">
+    <h1 class="couple-name">Suryadi & Lillis Cicilia</h1>
+    <p class="invitation-text">Dengan segala kerendahan hati, kami mengundang Bapak/Ibu/Saudara/i untuk hadir</p>
+    <p class="date">Sabtu, 08 November 2025</p>
+    <p class="location">Mall Taman Palem, Lt 3 Blok TR-01</p>
+    <a class="maps-link" href="https://maps.google.com/?q=Mall+Taman+Palem" target="_blank">Lihat Lokasi di Google Maps</a>
+  </div>
 
-  <!-- Header -->
-  <header class="header" data-aos="fade-up">
-    <img src="peacock.png" alt="Peacock" class="peacock-img" />
-    <h1>Grei & Rifi</h1>
-    <p>Sabtu, 07 Desember 2024</p>
-  </header>
-
-  <!-- Kutipan -->
-  <section class="quote" data-aos="fade-up">
-    <p>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu..."</p>
-    <p>(Surah Ar-Rum : 21)</p>
-  </section>
-
-  <!-- Detail Acara -->
-  <section class="details" data-aos="fade-up">
-    <h2>Akad Nikah</h2>
-    <p>Selasa, 24 Desember 2024</p>
-    <p>11:00 - 13:00 WIB</p>
-    <p>Kediaman Mempelai</p>
-
-    <h2>Resepsi</h2>
-    <p>Selasa, 24 Desember 2024</p>
-    <p>11:00 - 13:00 WIB</p>
-    <p>Kediaman Mempelai</p>
-  </section>
-
-  <!-- RSVP -->
-  <section class="rsvp" data-aos="fade-up">
+  <section class="rsvp">
     <h2>Konfirmasi Kehadiran</h2>
-    <form action="https://formsubmit.co/emailkamu@example.com" method="POST">
-      <input type="text" name="nama" placeholder="Nama Lengkap" required />
-      <input type="text" name="jumlah" placeholder="Jumlah Tamu" required />
-      <textarea name="pesan" placeholder="Ucapan / Doa"></textarea>
+    <form id="rsvp-form">
+      <input type="text" name="name" placeholder="Nama Anda" required />
+      <select name="attendance">
+        <option value="hadir">Hadir</option>
+        <option value="tidak_hadir">Tidak Hadir</option>
+      </select>
       <button type="submit">Kirim</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2024 Grei & Rifi</p>
-  </footer>
+  <section class="gallery">
+    <h2>Galeri Foto</h2>
+    <div class="photos">
+      <!-- Tambahkan <img src="foto1.jpg"> dst di sini -->
+    </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <section class="guestbook">
+    <h2>Buku Tamu</h2>
+    <form id="guestbook-form">
+      <input type="text" name="guest-name" placeholder="Nama Anda" required />
+      <textarea name="message" placeholder="Ucapan untuk mempelai..." required></textarea>
+      <button type="submit">Kirim Ucapan</button>
+    </form>
+    <div id="messages">
+      <!-- Ucapan tampil di sini -->
+    </div>
+  </section>
+
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutar musik.
+  </audio>
+
   <script>
-    AOS.init();
+    // Placeholder: Nanti bisa ditambahkan JS untuk simpan data RSVP & ucapan
+    document.getElementById('guestbook-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this['guest-name'].value;
+      const message = this.message.value;
+      const msgBox = document.getElementById('messages');
+      const newMsg = document.createElement('p');
+      newMsg.innerHTML = `<strong>${name}:</strong> ${message}`;
+      msgBox.prepend(newMsg);
+      this.reset();
+    });
   </script>
 </body>
 </html>
