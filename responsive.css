@@ -1,82 +1,45 @@
 /* responsive.css */
 
-/* Default mobile-first styles assumed from original HTML */
-
-/* Tablet & Desktop Styles */
 @media (min-width: 768px) {
-  #workspace-container,
-  #panZoom,
-  .canvas {
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-    position: static !important;
+  body {
+    font-size: 1.1rem;
   }
 
-  .container-mobile {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 2rem;
+  .hero {
+    padding: 6rem 2rem;
   }
 
-  .satumomen_slide {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  .name {
+    font-size: 4rem;
   }
 
-  .frame {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .and {
+    font-size: 2.5rem;
   }
 
-  .frame img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .editable {
+  .btn-open {
     font-size: 1.2rem;
+    padding: 1rem 2rem;
   }
 
-  .btn-open-invitation {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
+  .gallery img {
+    width: 150px;
+    height: 150px;
   }
 
-  .font-latin {
-    font-size: 3rem !important;
-  }
-
-  .quotes {
-    font-size: 1.1rem !important;
+  form input, form select, form button {
+    font-size: 1.1rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .container-mobile {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 768px) {
-  #panZoom {
-    transform: none !important;
-    transform-origin: unset !important;
-    position: static !important;
+  .hero {
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
-  #workspace-container {
-    position: static !important;
-    overflow: visible !important;
-  }
-
-  .canvas {
-    height: auto !important;
-    transform: none !important;
-    position: static !important;
-    width: 100% !important;
+  .event, .rsvp, .gallery, .quotes {
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
