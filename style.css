@@ -1,153 +1,75 @@
+/* style.css */
+:root {
+  --inv-bg: #f6f4f0;
+  --inv-base: #3d67a4;
+  --inv-accent: #e6a0ad;
+  --btn-color: #ffffff;
+  --font-base: "Jost", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: 'Great Vibes', cursive;
-  background-color: #fce8f3;
-  overflow-x: hidden;
+  font-family: var(--font-base);
+  background-color: var(--inv-bg);
+  color: var(--inv-base);
 }
 
-.background {
-  position: relative;
-  width: 100%;
-  height: 480px;
-  background: linear-gradient(to bottom, #ffdde1, #fce8f3);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-}
-
-.merak {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-160%);
-  width: 150px;
-  animation: float 6s ease-in-out infinite;
-  z-index: 2;
-}
-
-.lonceng {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  animation: swing 2s ease-in-out infinite;
-  z-index: 2;
-}
-
-.gapura {
-  width: 100%;
-  height: 220px;
-  background: url('https://png.pngtree.com/png-vector/20250104/ourmid/pngtree-classical-archway-with-ornate-details-png-image_15042690.png') no-repeat center/contain;
-  margin-top: 80px;
-  z-index: 1;
-}
-
-.sakura {
-  position: absolute;
-  bottom: 0;
-  width: 120px;
-  animation: sway 6s ease-in-out infinite;
-  z-index: 1;
-}
-
-.sakura.left {
-  left: 0;
-  transform: rotate(-15deg);
-}
-
-.sakura.right {
-  right: 0;
-  bottom: 40px;
-  transform: rotate(15deg);
-}
-
-
-.burung {
-  position: absolute;
-  top: 60px;
-  left: -100px;
-  width: 100px;
-  animation: fly 12s linear infinite;
-  z-index: 1;
-}
-
-.konten {
-  text-align: center;
-  padding: 2rem;
-  animation: fadeIn 2.5s ease-in-out;
-}
-
-.judul {
-  font-size: 3rem;
-  color: #b1005d;
-  animation: fadeUp 2s ease-out forwards;
-  opacity: 0;
-}
-
-.deskripsi {
-  font-size: 1.2rem;
-  color: #5a2a4d;
-  margin-bottom: 2rem;
-  animation: fadeUp 3s ease-out forwards;
-  opacity: 0;
-  animation-delay: 0.5s;
-}
-
-.rekening {
-  background: #fff0f6;
+.container-mobile {
+  max-width: 480px;
+  margin: 0 auto;
   padding: 1rem;
+  text-align: center;
+}
+
+.hero {
+  background: url('https://satumomen.com/themes/watercolor-peacock/bg.webp') no-repeat center center;
+  background-size: cover;
+  padding: 4rem 1rem;
   border-radius: 12px;
-  display: inline-block;
-  margin-top: 2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  animation: fadeUp 3s ease-out forwards;
-  opacity: 0;
-  animation-delay: 1s;
 }
 
-.rekening-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-  font-size: 1.4rem;
-  margin-top: 1rem;
+.subheading {
+  font-size: 1rem;
+  color: var(--inv-base);
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 3rem;
   font-weight: bold;
+  color: var(--inv-accent);
+  margin: 0;
 }
 
-.rekening-info img {
-  width: 60px;
+.and {
+  font-size: 2rem;
+  color: var(--inv-accent);
+  margin: 1rem 0;
+  display: block;
 }
 
-@keyframes swing {
-  0%, 100% { transform: translateX(-50%) rotate(0deg); }
-  50% { transform: translateX(-50%) rotate(10deg); }
+.guest {
+  font-size: 1rem;
+  margin-top: 2rem;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateX(-160%) translateY(0); }
-  50% { transform: translateX(-160%) translateY(-10px); }
+.guest-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--inv-accent);
+  margin-bottom: 1rem;
 }
 
-@keyframes sway {
-  0%, 100% { transform: rotate(-2deg); }
-  50% { transform: rotate(2deg); }
+.btn-open {
+  background-color: var(--inv-accent);
+  color: var(--btn-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-@keyframes fly {
-  0% { left: -100px; top: 60px; }
-  50% { left: 50%; top: 20px; }
-  100% { left: 110%; top: 40px; }
-}
-
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.btn-open:hover {
+  background-color: #d98c99;
 }
