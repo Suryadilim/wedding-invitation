@@ -14,24 +14,17 @@ body {
   color: var(--inv-base);
 }
 
-.container-mobile {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: center;
-}
-
 .hero {
   background: url('https://satumomen.com/themes/watercolor-peacock/bg.webp') no-repeat center center;
   background-size: cover;
+  text-align: center;
   padding: 4rem 1rem;
   border-radius: 12px;
 }
 
 .subheading {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--inv-base);
-  margin-bottom: 1rem;
 }
 
 .name {
@@ -43,33 +36,75 @@ body {
 
 .and {
   font-size: 2rem;
-  color: var(--inv-accent);
-  margin: 1rem 0;
   display: block;
+  margin: 0.5rem 0;
+  color: var(--inv-accent);
 }
 
-.guest {
-  font-size: 1rem;
-  margin-top: 2rem;
+.guest, .guest-name {
+  margin-top: 1rem;
 }
 
 .guest-name {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: var(--inv-accent);
-  margin-bottom: 1rem;
 }
 
 .btn-open {
+  margin-top: 1.5rem;
   background-color: var(--inv-accent);
   color: var(--btn-color);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
-  cursor: pointer;
   font-size: 1rem;
+  cursor: pointer;
 }
 
-.btn-open:hover {
-  background-color: #d98c99;
+.quotes {
+  padding: 2rem;
+  text-align: center;
+  font-style: italic;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.reference {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.event, .rsvp, .gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery .frame {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+form input, form select, form button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
 }
