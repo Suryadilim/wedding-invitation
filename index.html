@@ -13,16 +13,16 @@
     <p class="invitation-text">Dengan segala kerendahan hati, kami mengundang Bapak/Ibu/Saudara/i untuk hadir</p>
     <p class="date">Sabtu, 08 November 2025</p>
     <p class="location">Mall Taman Palem, Lt 3 Blok TR-01</p>
-    <a class="maps-link" href="https://g.co/kgs/GUKMymJ" target="_blank">Lihat Lokasi di Google Maps</a>
+    <a class="maps-link" href="https://maps.google.com/?q=Mall+Taman+Palem" target="_blank">Lihat Lokasi di Google Maps</a>
   </div>
 
-  <section class="rsvp">
+  <section class="rsvp" id="rsvp">
     <h2>Konfirmasi Kehadiran</h2>
-    <form id="rsvp-form">
+    <form id="rsvp-form" action="URL_WEB_APP_KAMU" method="POST">
       <input type="text" name="name" placeholder="Nama Anda" required />
       <select name="attendance">
-        <option value="hadir">Hadir</option>
-        <option value="tidak_hadir">Tidak Hadir</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Tidak Hadir">Tidak Hadir</option>
       </select>
       <button type="submit">Kirim</button>
     </form>
@@ -31,7 +31,9 @@
   <section class="gallery">
     <h2>Galeri Foto</h2>
     <div class="photos">
-      <!-- Tambahkan <img src="foto1.jpg"> dst di sini -->
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
     </div>
   </section>
 
@@ -42,9 +44,7 @@
       <textarea name="message" placeholder="Ucapan untuk mempelai..." required></textarea>
       <button type="submit">Kirim Ucapan</button>
     </form>
-    <div id="messages">
-      <!-- Ucapan tampil di sini -->
-    </div>
+    <div id="messages"></div>
   </section>
 
   <audio autoplay loop>
@@ -53,7 +53,6 @@
   </audio>
 
   <script>
-    // Placeholder: Nanti bisa ditambahkan JS untuk simpan data RSVP & ucapan
     document.getElementById('guestbook-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = this['guest-name'].value;
