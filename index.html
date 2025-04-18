@@ -1,61 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Pernikahan Grei & Rifi</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="responsive.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Grei & Rifi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <p class="subheading">The Wedding Of</p>
-      <h1 class="name">Grei</h1>
-      <span class="and">&</span>
-      <h1 class="name">Rifi</h1>
-      <p class="guest">Kepada Yth;<br />Bapak/Ibu/Saudara/i</p>
-      <p class="guest-name">Nama Tamu</p>
-      <button class="btn-open">Buka Undangan</button>
-    </div>
-  </header>
+  <audio autoplay loop>
+    <source src="audio/beautiful-in-white.mp3" type="audio/mpeg">
+  </audio>
 
-  <section class="quotes">
-    <p class="editable">
-      "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya."
-    </p>
-    <span class="reference">(QS. Ar-Rum: 21)</span>
+  <div class="background"></div>
+
+  <section class="intro fade-in">
+    <h2>The Wedding Of</h2>
+    <h1>Grei & Rifi</h1>
+    <p>Kepada Yth;<br>Bapak/Ibu/Saudara/i</p>
+    <p class="guest-name">Nama Tamu</p>
+    <button id="openInvitation">Buka Undangan</button>
   </section>
 
-  <section class="event">
-    <h2>Akad Nikah</h2>
-    <p>Sabtu, 10 Mei 2025<br />10.00 WIB - selesai</p>
-    <p>Gedung Biru, Jakarta</p>
+  <nav class="bottom-nav">
+    <a href="#quotes">Opening</a>
+    <a href="#quotes">Quotes</a>
+    <a href="#couple">Couple</a>
+    <a href="#akad">Akad</a>
+    <a href="#resepsi">Resepsi</a>
+  </nav>
 
-    <h2>Resepsi</h2>
-    <p>Sabtu, 10 Mei 2025<br />13.00 WIB - selesai</p>
-    <p>Gedung Biru, Jakarta</p>
-  </section>
+  <section id="quotes" class="fade-in"><h2>Quotes</h2></section>
+  <section id="couple" class="fade-in"><h2>Couple</h2></section>
+  <section id="akad" class="fade-in"><h2>Akad - 08 November 2025, 12:00</h2></section>
+  <section id="resepsi" class="fade-in"><h2>Resepsi - 08 November 2025, 16:00</h2></section>
 
-  <section class="gallery">
-    <h2>Galeri Foto</h2>
-    <div class="frame">
-      <img src="foto1.jpg" alt="Foto 1" />
-      <img src="foto2.jpg" alt="Foto 2" />
-      <img src="foto3.jpg" alt="Foto 3" />
-    </div>
-  </section>
-
-  <section class="rsvp">
-    <h2>Konfirmasi Kehadiran</h2>
-    <form>
-      <input type="text" placeholder="Nama" required />
-      <select required>
-        <option value="hadir">Hadir</option>
-        <option value="tidak">Tidak Hadir</option>
-      </select>
-      <button type="submit">Kirim</button>
-    </form>
-  </section>
+  <script>
+    document.getElementById('openInvitation').addEventListener('click', function () {
+      document.getElementById('quotes').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
