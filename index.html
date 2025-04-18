@@ -9,13 +9,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <style>
+    body {
+      background: url('https://png.pngtree.com/thumb_back/fh260/background/20241031/pngtree-cream-and-brown-watercolor-wedding-invitation-portrait-image_16481162.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
     .background-container {
       position: fixed;
       inset: 0;
       z-index: -1;
       overflow: hidden;
     }
-
     .bg-decor {
       position: absolute;
       z-index: -1;
@@ -23,12 +26,10 @@
       opacity: 0.5;
       animation: float-slow 212s ease-in-out infinite;
     }
-
     .top-left { top: 0; left: 0; }
     .top-right { top: 0; right: 0; transform: scaleX(-1); }
     .bottom-left { bottom: 0; left: 0; transform: scaleX(-1); }
     .bottom-right { bottom: 0; right: 0; }
-
     @keyframes float-slow {
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
