@@ -1,113 +1,161 @@
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: url('floral-bg-left.png') left top no-repeat, 
-              url('floral-bg-right.png') right bottom no-repeat,
-              #fffafc;
-  background-size: 150px auto, 150px auto;
-  background-attachment: fixed;
-  color: #333;
-}
-
-.hero {
-  background: linear-gradient(to bottom, #e0f7fa, #fce4ec);
-  text-align: center;
-  padding: 4rem 2rem;
-  border-bottom: 5px solid #f8bbd0;
-}
-
-.couple-name {
   font-family: 'Great Vibes', cursive;
+  background-color: #fce8f3;
+  overflow-x: hidden;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background: linear-gradient(to bottom, #ffdde1, #fce8f3);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.merak {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 140px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.lonceng {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 90px;
+  animation: swing 2s infinite;
+}
+
+.gapura {
+  width: 100%;
+  height: 180px;
+  background: url('gapura-india.png') no-repeat center/contain;
+  margin-bottom: -10px;
+}
+
+.konten {
+  text-align: center;
+  padding: 2rem;
+}
+
+.judul {
   font-size: 3rem;
-  color: #ad1457;
+  margin-top: 1rem;
+  color: #b1005d;
+}
+
+.deskripsi, .penutup {
+  font-size: 1.2rem;
+  color: #5a2a4d;
+  margin: 1.5rem auto;
+  max-width: 600px;
+}
+
+.detail-acara {
+  background: #fff6fb;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-acara h2 {
+  font-size: 1.8rem;
+  color: #a0005b;
   margin-bottom: 0.5rem;
 }
 
-.invitation-text, .date, .location {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
+.detail-acara p {
+  font-size: 1rem;
+  color: #3e0030;
+  margin: 0.3rem 0;
 }
 
-.maps-link {
+.rekening {
+  background: #fff0f6;
+  padding: 1rem;
+  border-radius: 12px;
   display: inline-block;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.rekening-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  font-size: 1.4rem;
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #f8bbd0;
-  color: #880e4f;
-  text-decoration: none;
-  border-radius: 8px;
   font-weight: bold;
 }
 
-section {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
+.rekening-info img {
+  width: 60px;
+}
+
+.rsvp {
+  background: #fff;
   padding: 2rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border-radius: 12px;
   margin: 2rem auto;
-  max-width: 700px;
-  animation: fadeInUp 1s ease both;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-h2 {
-  font-family: 'Great Vibes', cursive;
-  color: #ad1457;
-  font-size: 2rem;
-  text-align: center;
+.rsvp h2 {
+  color: #b1005d;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
-form {
+.rsvp form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-input, select, textarea, button {
-  padding: 0.75rem;
+.rsvp input,
+.rsvp textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: sans-serif;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
 }
 
-button {
-  background: #ad1457;
-  color: #fff;
+.rsvp button {
+  background-color: #b1005d;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background: #880e4f;
+.rsvp button:hover {
+  background-color: #8d0048;
 }
 
-.photos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
 }
 
-.photos img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-#messages p {
-  background: #fce4ec;
-  padding: 0.75rem;
-  border-radius: 10px;
-  margin-top: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
 }
