@@ -7,14 +7,65 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="responsive.css" />
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <style>
+    body {
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .decor-top-left, .decor-top-right,
+    .decor-bottom-left, .decor-bottom-right {
+      position: absolute;
+      z-index: 0;
+      opacity: 0.6;
+      animation: float 20s ease-in-out infinite;
+    }
+    .decor-top-left {
+      top: 0;
+      left: 0;
+      width: 200px;
+    }
+    .decor-top-right {
+      top: 0;
+      right: 0;
+      width: 200px;
+    }
+    .decor-bottom-left {
+      bottom: 0;
+      left: 10%;
+      width: 180px;
+      transform: scaleX(-1);
+    }
+    .decor-bottom-right {
+      bottom: 0;
+      right: 10%;
+      width: 180px;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Dekorasi Gambar -->
+  <img src="Peacock.jpg" class="decor-bottom-left" alt="Peacock Left">
+  <img src="Peacock.jpg" class="decor-bottom-right" alt="Peacock Right">
+  <img src="Sakura Flower.jpg" class="decor-top-left" alt="Bunga Sakura Kiri">
+  <img src="Sakura Flower.jpg" class="decor-top-right" alt="Bunga Sakura Kanan">
+
   <!-- Musik Otomatis -->
   <audio id="bg-music" autoplay loop>
     <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
     Browser Anda tidak mendukung audio.
   </audio>
-
   <button onclick="toggleMusic()" class="btn-music">⏯ Musik</button>
 
   <header class="hero">
@@ -36,7 +87,6 @@
     <span class="reference">(QS. Ar-Rum: 21)</span>
   </section>
 
-  <!-- Countdown -->
   <section class="countdown">
     <h2>Menuju Hari Bahagia</h2>
     <div id="timer">Loading...</div>
@@ -52,13 +102,11 @@
     <p>Jl. Kamal Raya Outer Ring Road, Mall Taman Palem, Lt 3 Blok TR-01, Jakarta Barat</p>
   </section>
 
-  <!-- Google Maps Embed -->
   <section class="maps">
     <h2>Lokasi Acara</h2>
     <iframe src="https://www.google.com/maps?q=Jl.+Kamal+Raya+Outer+Ring+Road,+Mall+Taman+Palem,+Lt+3+Blok+TR-01,+Jakarta+Barat&output=embed" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
-  <!-- Add to Calendar -->
   <section class="calendar">
     <h2>Simpan ke Kalender</h2>
     <a class="btn-open" target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Pernikahan+Grei+%26+Rifi&dates=20251108T050000Z/20251108T110000Z&details=Undangan+Pernikahan+di+Mall+Taman+Palem,+Lt+3+Blok+TR-01,+Jakarta+Barat&location=Jakarta">Tambahkan ke Google Calendar</a>
@@ -86,7 +134,6 @@
   </section>
 
   <script>
-    // Countdown Timer
     const targetDate = dayjs('2025-11-08T00:00:00');
     const timerEl = document.getElementById('timer');
     setInterval(() => {
@@ -102,13 +149,11 @@
       }
     }, 1000);
 
-    // Music Toggle
     const music = document.getElementById('bg-music');
     function toggleMusic() {
       if (music.paused) music.play();
       else music.pause();
     }
-
   </script>
 </body>
 </html>
