@@ -6,9 +6,45 @@
   <title>Undangan Pernikahan Grei & Rifi</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <style>
+    .background-container {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .bg-decor {
+      position: absolute;
+      z-index: -1;
+      max-width: 300px;
+      opacity: 0.5;
+      animation: float-slow 20s ease-in-out infinite;
+    }
+
+    .top-left { top: 0; left: 0; }
+    .top-right { top: 0; right: 0; transform: scaleX(-1); }
+    .bottom-left { bottom: 0; left: 0; transform: scaleX(-1); }
+    .bottom-right { bottom: 0; right: 0; }
+
+    @keyframes float-slow {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
+  <!-- Background Dekorasi -->
+  <div class="background-container">
+    <img src="Sakura Flower.jpg" class="bg-decor top-left animate__animated animate__fadeInDown" alt="Bunga Kiri Atas">
+    <img src="Sakura Flower.jpg" class="bg-decor top-right animate__animated animate__fadeInDown" alt="Bunga Kanan Atas">
+    <img src="Peacock.jpg" class="bg-decor bottom-left animate__animated animate__fadeInUp" alt="Burung Merak Kiri">
+    <img src="Peacock.jpg" class="bg-decor bottom-right animate__animated animate__fadeInUp" alt="Burung Merak Kanan">
+  </div>
+
   <!-- Musik Otomatis -->
   <audio id="bg-music" autoplay loop>
     <source src="beautiful-in-white.mp3" type="audio/mpeg">
