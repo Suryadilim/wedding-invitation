@@ -7,100 +7,42 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="responsive.css" />
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    .bg-flower {
-      position: fixed;
-      width: 200px;
-      opacity: 0.5;
-      z-index: -1;
-      animation: slow-float 20s ease-in-out infinite;
-    }
-
-    .flower-top-left {
-      top: 0;
-      left: 0;
-      transform: rotate(-15deg);
-    }
-
-    .flower-top-right {
-      top: 0;
-      right: 0;
-      transform: rotate(15deg);
-    }
-
-    .bg-peacock {
-      position: fixed;
-      bottom: 0;
-      width: 250px;
-      opacity: 0.6;
-      z-index: -1;
-      animation: slow-float 25s ease-in-out infinite;
-    }
-
-    .peacock-left {
-      left: 0;
-      transform: scaleX(-1);
-    }
-
-    .peacock-right {
-      right: 0;
-    }
-
-    @keyframes slow-float {
-      0% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-10px) scale(1.01); }
-      100% { transform: translateY(0) scale(1); }
-    }
-  </style>
 </head>
 <body>
-  <!-- Decorative Background -->
-  <img src="Sakura Flower.jpg" class="bg-flower flower-top-left" alt="Bunga Sakura Kiri Atas">
-  <img src="Sakura Flower.jpg" class="bg-flower flower-top-right" alt="Bunga Sakura Kanan Atas">
-  <img src="Peacock.jpg" class="bg-peacock peacock-left" alt="Peacock Kiri">
-  <img src="Peacock.jpg" class="bg-peacock peacock-right" alt="Peacock Kanan">
-
   <!-- Musik Otomatis -->
   <audio id="bg-music" autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung audio.
+    <source src="beautiful-in-white.mp3" type="audio/mpeg">
   </audio>
-
   <button onclick="toggleMusic()" class="btn-music">⏯ Musik</button>
 
+  <!-- Opening Section -->
   <header class="hero">
     <div class="hero-inner">
       <p class="subheading">The Wedding Of</p>
-      <h1 class="name">Grei</h1>
+      <h1 class="name">Suryadi</h1>
       <span class="and">&</span>
-      <h1 class="name">Rifi</h1>
+      <h1 class="name">Lillis Cicilia</h1>
       <p class="guest">Kepada Yth;<br />Bapak/Ibu/Saudara/i</p>
       <p class="guest-name">Nama Tamu</p>
-      <button class="btn-open">Buka Undangan</button>
+      <button class="btn-open" onclick="document.getElementById('quotes').scrollIntoView({ behavior: 'smooth' })">Buka Undangan</button>
     </div>
   </header>
 
-  <section class="quotes">
+  <!-- Quotes Section -->
+  <section id="quotes" class="quotes">
     <p class="editable">
-      "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya."
+      "Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."
     </p>
-    <span class="reference">(QS. Ar-Rum: 21)</span>
+    <span class="reference">(Matius 19:6 TB)</span>
   </section>
 
+  <!-- Countdown Section -->
   <section class="countdown">
     <h2>Menuju Hari Bahagia</h2>
     <div id="timer">Loading...</div>
   </section>
 
+  <!-- Event Section -->
   <section class="event">
     <h2>Pemberkatan</h2>
     <p>Sabtu, 08 November 2025<br />12.00 WIB</p>
@@ -111,16 +53,19 @@
     <p>Jl. Kamal Raya Outer Ring Road, Mall Taman Palem, Lt 3 Blok TR-01, Jakarta Barat</p>
   </section>
 
+  <!-- Maps Section -->
   <section class="maps">
     <h2>Lokasi Acara</h2>
     <iframe src="https://www.google.com/maps?q=Jl.+Kamal+Raya+Outer+Ring+Road,+Mall+Taman+Palem,+Lt+3+Blok+TR-01,+Jakarta+Barat&output=embed" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
+  <!-- Kalender Section -->
   <section class="calendar">
     <h2>Simpan ke Kalender</h2>
     <a class="btn-open" target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Pernikahan+Grei+%26+Rifi&dates=20251108T050000Z/20251108T110000Z&details=Undangan+Pernikahan+di+Mall+Taman+Palem,+Lt+3+Blok+TR-01,+Jakarta+Barat&location=Jakarta">Tambahkan ke Google Calendar</a>
   </section>
 
+  <!-- Galeri Section -->
   <section class="gallery">
     <h2>Galeri Foto</h2>
     <div class="frame">
@@ -130,6 +75,7 @@
     </div>
   </section>
 
+  <!-- RSVP Section -->
   <section class="rsvp">
     <h2>Konfirmasi Kehadiran</h2>
     <form action="https://formspree.io/f/your-id" method="POST">
@@ -142,8 +88,8 @@
     </form>
   </section>
 
+  <!-- Script Section -->
   <script>
-    // Countdown Timer
     const targetDate = dayjs('2025-11-08T00:00:00');
     const timerEl = document.getElementById('timer');
     setInterval(() => {
@@ -159,7 +105,6 @@
       }
     }, 1000);
 
-    // Music Toggle
     const music = document.getElementById('bg-music');
     function toggleMusic() {
       if (music.paused) music.play();
