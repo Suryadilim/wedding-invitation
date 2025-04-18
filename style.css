@@ -1,83 +1,103 @@
 /* style.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;700&display=swap');
-
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('Peacock.jpg') no-repeat bottom left,
+              url('Peacock.jpg') no-repeat bottom right,
+              url('Sakura Flower.jpg') no-repeat top left,
+              url('Sakura Flower.jpg') no-repeat top right;
+  background-size: 300px auto;
+  background-attachment: fixed;
+  background-color: #fffaf8;
   color: #333;
-  scroll-behavior: smooth;
-  position: relative;
+  animation: backgroundFloat 30s infinite linear;
 }
 
-.container {
-  padding: 2rem;
+@keyframes backgroundFloat {
+  0% { background-position: left bottom, right bottom, left top, right top; }
+  50% { background-position: left 10px bottom 10px, right 10px bottom 10px, left 10px top 10px, right 10px top 10px; }
+  100% { background-position: left bottom, right bottom, left top, right top; }
+}
+
+.hero {
   text-align: center;
-  animation: fadeIn 2s ease-in;
+  padding: 100px 20px;
+  background: rgba(255, 255, 255, 0.8);
 }
 
-h1, h2, h3 {
-  font-family: 'Great Vibes', cursive;
-  margin: 0.5rem 0;
-  animation: fadeIn 2s ease-in;
+.hero .subheading {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+.hero .name {
+  font-size: 48px;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero .and {
+  font-size: 32px;
+  display: block;
+  margin: 10px 0;
+}
+
+.hero .guest, .hero .guest-name {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.btn-open, .btn-music {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: #e5c1c5;
   border: none;
-  background-color: #f0b3c5;
-  color: white;
-  border-radius: 10px;
+  border-radius: 6px;
   cursor: pointer;
-  animation: fadeIn 2s ease-in;
+  transition: background 0.3s ease;
 }
 
-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.btn-open:hover, .btn-music:hover {
+  background-color: #d3a8ad;
+}
+
+.quotes, .countdown, .event, .maps, .calendar, .gallery, .rsvp {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.gallery .frame {
   display: flex;
-  justify-content: space-around;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-  padding: 0.5rem 0;
-  z-index: 1000;
-  animation: fadeIn 2s ease-in;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-nav a {
-  text-decoration: none;
-  color: #f08080;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #d16a7e;
-}
-
-.background-corner {
-  position: absolute;
+.gallery img {
   width: 200px;
-  height: auto;
-  opacity: 0.7;
-  z-index: 0;
-  animation: slowFadeIn 5s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.top-left { top: 0; left: 0; }
-.top-right { top: 0; right: 0; transform: scaleX(-1); }
-.bottom-left { bottom: 0; left: 0; transform: scaleY(-1); }
-.bottom-right { bottom: 0; right: 0; transform: scale(-1); }
+.rsvp form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  max-width: 400px;
+  margin: auto;
+}
+
+.rsvp input, .rsvp select, .rsvp button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slowFadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 0.7; }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
