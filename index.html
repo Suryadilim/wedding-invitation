@@ -5,22 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Undangan Pernikahan | Grei & Rifi</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Musik -->
+  <audio id="bg-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+  <script>
+    window.addEventListener('click', () => {
+      document.getElementById('bg-music').play();
+    }, { once: true });
+  </script>
+
   <!-- Header -->
-  <header class="header">
+  <header class="header" data-aos="fade-up">
+    <img src="peacock.png" alt="Peacock" class="peacock-img" />
     <h1>Grei & Rifi</h1>
     <p>Sabtu, 07 Desember 2024</p>
   </header>
 
   <!-- Kutipan -->
-  <section class="quote">
+  <section class="quote" data-aos="fade-up">
     <p>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu..."</p>
     <p>(Surah Ar-Rum : 21)</p>
   </section>
 
   <!-- Detail Acara -->
-  <section class="details">
+  <section class="details" data-aos="fade-up">
     <h2>Akad Nikah</h2>
     <p>Selasa, 24 Desember 2024</p>
     <p>11:00 - 13:00 WIB</p>
@@ -33,7 +47,7 @@
   </section>
 
   <!-- RSVP -->
-  <section class="rsvp">
+  <section class="rsvp" data-aos="fade-up">
     <h2>Konfirmasi Kehadiran</h2>
     <form action="https://formsubmit.co/emailkamu@example.com" method="POST">
       <input type="text" name="nama" placeholder="Nama Lengkap" required />
@@ -47,5 +61,10 @@
   <footer class="footer">
     <p>© 2024 Grei & Rifi</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
