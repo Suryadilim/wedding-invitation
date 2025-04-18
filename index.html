@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Grei & Rifi</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grei & Rifi Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Musik -->
   <audio autoplay loop>
-    <source src="audio/beautiful-in-white.mp3" type="audio/mpeg">
+    <source src="beautiful-in-white.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="background"></div>
+  <!-- Background Bunga dan Merak -->
+  <div class="corner top-left"></div>
+  <div class="corner top-right"></div>
+  <div class="corner bottom-left"></div>
+  <div class="corner bottom-right"></div>
 
-  <section class="intro fade-in">
-    <h2>The Wedding Of</h2>
-    <h1>Grei & Rifi</h1>
-    <p>Kepada Yth;<br>Bapak/Ibu/Saudara/i</p>
+  <!-- Opening -->
+  <section id="opening" class="fade-in">
+    <h4>The Wedding Of</h4>
+    <h1 class="bride-groom">Grei & Rifi</h1>
+    <p class="guest">Kepada Yth;<br />Bapak/Ibu/Saudara/i</p>
     <p class="guest-name">Nama Tamu</p>
-    <button id="openInvitation">Buka Undangan</button>
+    <button onclick="document.getElementById('quotes').scrollIntoView({ behavior: 'smooth' })">Buka Undangan</button>
   </section>
 
+  <!-- Quotes -->
+  <section id="quotes" class="fade-in">
+    <h2>Quotes</h2>
+    <p>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."</p>
+  </section>
+
+  <!-- Couple -->
+  <section id="couple" class="fade-in">
+    <h2>Couple</h2>
+    <p>Grei & Rifi</p>
+  </section>
+
+  <!-- Akad -->
+  <section id="akad" class="fade-in">
+    <h2>Akad</h2>
+    <p>08 November 2025, 12:00</p>
+  </section>
+
+  <!-- Resepsi -->
+  <section id="resepsi" class="fade-in">
+    <h2>Resepsi</h2>
+    <p>08 November 2025, 16:00</p>
+  </section>
+
+  <!-- Navigation -->
   <nav class="bottom-nav">
-    <a href="#quotes">Opening</a>
+    <a href="#opening">Opening</a>
     <a href="#quotes">Quotes</a>
     <a href="#couple">Couple</a>
     <a href="#akad">Akad</a>
     <a href="#resepsi">Resepsi</a>
   </nav>
-
-  <section id="quotes" class="fade-in"><h2>Quotes</h2></section>
-  <section id="couple" class="fade-in"><h2>Couple</h2></section>
-  <section id="akad" class="fade-in"><h2>Akad - 08 November 2025, 12:00</h2></section>
-  <section id="resepsi" class="fade-in"><h2>Resepsi - 08 November 2025, 16:00</h2></section>
-
-  <script>
-    document.getElementById('openInvitation').addEventListener('click', function () {
-      document.getElementById('quotes').scrollIntoView({ behavior: 'smooth' });
-    });
-  </script>
 </body>
 </html>
