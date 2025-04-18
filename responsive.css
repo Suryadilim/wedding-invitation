@@ -1,0 +1,44 @@
+/* responsive.css */
+
+/* Tablet & Desktop Styles */
+@media (min-width: 768px) {
+  .container-mobile {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .canvas {
+    transform: scale(1) !important;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .btn-open-invitation {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .frame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .frame img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .editable {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-mobile {
+    max-width: 1140px;
+  }
+}
