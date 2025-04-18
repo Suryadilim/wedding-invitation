@@ -2,44 +2,74 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Undangan Pernikahan</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan | Dian & Raka</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="audio" href="/music.mp3" />
 </head>
 <body>
+  <!-- Musik -->
+  <audio id="bg-music" autoplay loop>
+    <source src="/music.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+  <script>
+    window.addEventListener('click', () => {
+      const music = document.getElementById('bg-music');
+      music.play();
+    }, { once: true });
+  </script>
+
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="overlay">
-      <img src="foto-kami.jpg" alt="Foto Pasangan" class="foto-kami" />
-      <h1>Undangan Pernikahan</h1>
-      <h2>Suryadi & Lillis Cicilia</h2>
-      <p>Sabtu, 08 November 2025<br>Mall Taman Palem Lt.3 Blok TR-01 (Ex IP Man), Jakarta Barat</p>
+    <img src="/foto-pasangan.jpg" alt="Foto Pasangan" class="hero-img" />
+    <h1 class="hero-title">Dian & Raka</h1>
+    <p class="hero-date">Minggu, 20 Juli 2025</p>
+    <p class="hero-sub">Kami mengundang Anda untuk merayakan hari bahagia kami</p>
+    <a href="#rsvp" class="hero-button">Lihat Undangan</a>
+  </section>
+
+  <!-- Detail Acara -->
+  <section class="section detail">
+    <h2 class="section-title">Detail Acara</h2>
+    <div class="detail-box">
+      <h3 class="detail-sub">Akad Nikah</h3>
+      <p>Minggu, 20 Juli 2025</p>
+      <p>08.00 WIB</p>
+      <p>Masjid Al-Hikmah, Jakarta Barat</p>
+    </div>
+    <div class="detail-box">
+      <h3 class="detail-sub">Resepsi</h3>
+      <p>Minggu, 20 Juli 2025</p>
+      <p>11.00 - 14.00 WIB</p>
+      <p>Gedung Serbaguna Harmoni, Jakarta Barat</p>
     </div>
   </section>
-</body>
 
-
-  <!-- Detail Section -->
-  <section class="detail">
-    <h3>Detail Acara</h3>
-    <p><strong>Tanggal:</strong> Sabtu, 15 Agustus 2025</p>
-    <p><strong>Waktu:</strong> 10.00 WIB</p>
-    <p><strong>Tempat:</strong> Gedung Serbaguna, Jakarta</p>
+  <!-- Galeri -->
+  <section class="section gallery">
+    <h2 class="section-title">Galeri Kami</h2>
+    <div class="gallery-grid">
+      <img src="/foto1.jpg" alt="Galeri 1" />
+      <img src="/foto2.jpg" alt="Galeri 2" />
+      <img src="/foto3.jpg" alt="Galeri 3" />
+    </div>
   </section>
 
-  <!-- RSVP Section -->
-  <section class="rsvp">
-    <h3>Konfirmasi Kehadiran</h3>
-    <form id="form">
-      <input type="text" placeholder="Nama Anda" required />
-      <select required>
-        <option value="">-- Pilih Kehadiran --</option>
-        <option value="ya">Ya, saya hadir</option>
-        <option value="tidak">Maaf, tidak bisa hadir</option>
-      </select>
+  <!-- RSVP -->
+  <section id="rsvp" class="section rsvp">
+    <h2 class="section-title">Konfirmasi Kehadiran</h2>
+    <form action="https://formsubmit.co/emailkamu@example.com" method="POST" class="rsvp-form">
+      <input type="text" name="nama" required placeholder="Nama Lengkap" />
+      <input type="text" name="jumlah" required placeholder="Jumlah Tamu" />
+      <textarea name="pesan" placeholder="Ucapan / Doa"></textarea>
       <button type="submit">Kirim</button>
     </form>
   </section>
 
-  <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 Dian & Raka | Dibuat dengan ❤️ | Powered by Vercel
+  </footer>
 </body>
 </html>
