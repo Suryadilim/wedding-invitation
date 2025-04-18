@@ -1,68 +1,31 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Pernikahan | Suryadi & Lillis Cicilia</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="hero">
-    <h1 class="couple-name">Suryadi & Lillis Cicilia</h1>
-    <p class="invitation-text">Dengan segala kerendahan hati, kami mengundang Bapak/Ibu/Saudara/i untuk hadir</p>
-    <p class="date">Sabtu, 08 November 2025</p>
-    <p class="location">Mall Taman Palem, Lt 3 Blok TR-01</p>
-    <a class="maps-link" href="https://maps.google.com/?q=Mall+Taman+Palem" target="_blank">Lihat Lokasi di Google Maps</a>
+  <div class="background">
+    <img src="peacock.png" alt="Merak" class="merak">
+    <img src="bell.png" alt="Lonceng" class="lonceng">
+    <div class="gapura"></div>
   </div>
+  
+  <main class="konten">
+    <h1 class="judul">Undangan Pernikahan</h1>
+    <p class="deskripsi">Dengan penuh sukacita kami mengundang Anda untuk hadir dalam acara pernikahan kami</p>
 
-  <section class="rsvp" id="rsvp">
-    <h2>Konfirmasi Kehadiran</h2>
-    <form id="rsvp-form" action="URL_WEB_APP_KAMU" method="POST">
-      <input type="text" name="name" placeholder="Nama Anda" required />
-      <select name="attendance">
-        <option value="Hadir">Hadir</option>
-        <option value="Tidak Hadir">Tidak Hadir</option>
-      </select>
-      <button type="submit">Kirim</button>
-    </form>
-  </section>
-
-  <section class="gallery">
-    <h2>Galeri Foto</h2>
-    <div class="photos">
-      <img src="foto1.jpg" alt="Foto 1">
-      <img src="foto2.jpg" alt="Foto 2">
-      <img src="foto3.jpg" alt="Foto 3">
-    </div>
-  </section>
-
-  <section class="guestbook">
-    <h2>Buku Tamu</h2>
-    <form id="guestbook-form">
-      <input type="text" name="guest-name" placeholder="Nama Anda" required />
-      <textarea name="message" placeholder="Ucapan untuk mempelai..." required></textarea>
-      <button type="submit">Kirim Ucapan</button>
-    </form>
-    <div id="messages"></div>
-  </section>
-
-  <audio autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung pemutar musik.
-  </audio>
-
-  <script>
-    document.getElementById('guestbook-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = this['guest-name'].value;
-      const message = this.message.value;
-      const msgBox = document.getElementById('messages');
-      const newMsg = document.createElement('p');
-      newMsg.innerHTML = `<strong>${name}:</strong> ${message}`;
-      msgBox.prepend(newMsg);
-      this.reset();
-    });
-  </script>
+    <section class="rekening">
+      <h2>Kirim Hadiah</h2>
+      <p>Jika berhalangan hadir, Anda tetap bisa berbagi kebahagiaan melalui:</p>
+      <div class="rekening-info">
+        <img src="bca-logo.png" alt="Logo BCA">
+        <span>7015318422</span>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
