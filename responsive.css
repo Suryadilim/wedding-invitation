@@ -108,12 +108,6 @@
       if (music.paused) music.play();
       else music.pause();
     }
-      
-@media (min-width: 768px) {
-  .intro h1 { font-size: 3rem; }
-  .intro h2 { font-size: 2rem; }
-  .intro p { font-size: 1.2rem; }
-}
 
   </script>
 </body>
